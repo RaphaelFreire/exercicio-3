@@ -24,7 +24,16 @@ const parentList = [
 ]
 
 function renderParentList(list){
-  console.log(list);
+
+  let elementli;
+  
+  list.forEach(element => {
+
+    elementli = `<li>${element.name} é pai/mãe de ${element.children}</li>` 
+    $parentList.insertAdjacentHTML('beforeend', elementli)
+
+  });
+
 }
 
 renderParentList(parentList)
